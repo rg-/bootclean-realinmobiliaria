@@ -1,0 +1,17 @@
+.main-breadcrumb{
+    padding:24px 0;
+}
+.breadcrumb{
+    margin:0;
+    padding:0;
+}
+.breadcrumb-item {
+
+    + .breadcrumb-item{
+        &::before{
+            @include make-as-icomoon("\e902");
+            font-size:20x;
+        }
+    }
+
+} 

@@ -1,0 +1,117 @@
+.navbar-toggler.animate {
+    .navbar-toggler-icon{
+        top:10px;
+        &:before{
+            margin-top: -10px;
+        }
+        &:after{
+            margin-top: 10px;
+        }
+
+        &,&:before,&:after{
+            //@include WPBC-box-shadow(0 .5rem 1rem rgba(#000, .15));
+        }
+
+    }
+    &:hover .custom-toggler .navbar-toggler-icon:before{ 
+    }
+} 
+#main-navbar.affix{
+    .navbar-toggler.animate {
+        .navbar-toggler-icon{
+            &,&:before,&:after{
+                @include WPBC-box-shadow(none);
+            }
+        }
+    }
+}
+
+body.use-navbar-better #side-menu {
+    .navbar-toggler{
+        padding-right: 0!important;
+        .navbar-toggler-icon{
+            &:after,&:before{
+                background-color:var(--primary)!important;
+            }
+            
+        }
+    }
+    .nav-link{ 
+        font-size:22px; 
+        text-transform:uppercase; 
+    }
+    .lang-menu a{
+        color:$dark;
+    }
+    .pngicon-search{  
+        background-image: url('../images/theme/icon-search-alt.png');
+    } 
+}
+
+#main-navbar{
+
+    @include transition();
+
+    .brand-img-big,
+    .brand-img-alt{ 
+        display:none; 
+    }
+
+    .brand-img-big,
+    .brand-img-alt,
+    .brand-img-default { 
+        width: 232px; 
+        height: auto; 
+        margin: 19px auto 16px auto;
+        @include transition(); 
+        @include breakpoint(md){
+            width: 232px; 
+        }
+    } 
+
+    .navbar-nav{
+        .nav-link{
+            font-weight: 400;
+            font-size:13px;
+            text-transform:uppercase;  
+            padding: 30px 15px 27px 15px;
+            color: var(--secondary);
+            letter-spacing:1px;
+        }
+        .navbar-social{
+            background-color:var(--primary);
+            a{
+                margin:0; 
+            }
+        }
+    }
+
+    > .container {
+        padding-right:0;
+        position:relative; 
+        &:after{
+            content:"";
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:100%;
+            background-color: var(--primary);
+        }
+    } 
+
+} 
+
+
+body.use-navbar-better .side-menu-overlay{
+    //background: rgba(#fff, .8);
+    background: transparent;
+    z-index: 1030;
+}
+ 
+
+.dropdown-select .dropdown-menu{
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}

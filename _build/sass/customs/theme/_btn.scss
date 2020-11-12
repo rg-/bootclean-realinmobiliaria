@@ -1,0 +1,45 @@
+.btn{
+	letter-spacing:2px;
+}
+
+.btn-shadow{
+    @include WPBC-box-shadow(0 .5rem 1rem rgba(#000, .15)); 
+} 
+
+.btn-primary{
+    color:#fff;
+}
+.btn-white{
+    color:var(--primary);
+}
+
+.btn-max{
+	width:230px;
+	max-width:100%;
+	&.lg{
+		width:300px;
+	}
+}
+
+.btn-link.btn-back{
+	color:var(--secondary);
+	padding-left: 0;
+	>i{
+		vertical-align: middle;
+		height: 24px;
+		width: 24px;
+		background-position: center center;
+	}
+}
+
+.btn-back.btn-primary{
+	>i{
+		vertical-align: middle;
+		height: 24px;
+		width: 24px;
+		background-position: center center;
+	}
+	&:hover{
+		color:#fff;
+	}
+}

@@ -1,0 +1,78 @@
+.footer-border-row{
+    border-top: 2px solid #fff;
+}
+.footer-border-col{ 
+    @include breakpoint(lg) { 
+        border-right: 2px solid #fff;
+    }
+    @include breakpoint-max(md) {
+         border-top: 2px solid #fff;
+    }
+}
+.footer-copyright{
+    font-size:12px;
+    color: $gray-300;
+}
+
+.footer-address{
+    a{
+        color:#fff;
+        text-decoration:none;
+    }
+}
+
+.footer-social{
+    @include breakpoint-max(sm) {
+        display: -ms-flexbox!important;
+        display: flex!important;
+
+        -ms-flex-pack: justify!important;
+        justify-content: space-between!important;
+
+    } 
+}
+
+#main-footer{
+    a{
+        >[class*="pngicon-"]{
+            @include transition();
+        }
+    }
+    a:hover{
+        >[class*="pngicon-"]{
+            @include scale(1.1);
+        }
+    }
+
+    hr{
+        background-color: rgba(white,.2);
+    }
+}
+
+
+.row-contacto{
+    border-bottom:2px solid rgba(white,.2);
+    font-size:15px; 
+
+    p{
+        margin:20px 0 10px 0;
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+    .has-icon,
+    a{
+        display:inline-block;
+        color:#fff;
+        text-decoration:none;
+        position:relative;
+        padding-left:26px;
+        margin-bottom: 4px;
+        [class*="bcicon-"] {
+            position: absolute;
+            top: -9px;
+            left: -12px;
+            font-size: 40px;
+            color:var(--primary);
+        }
+    }
+}

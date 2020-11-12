@@ -1,0 +1,52 @@
+// Custom variables  
+$body-bg: #ffffff!default;
+$body-color: #646464!default;
+
+$headings-line-height: 1!default;
+
+/*
+$font-weight-base: 300!default;
+$font-size-base: 1.0625rem!default;
+$font-size-sm: 0.875rem!default;
+$line-height-base: 1.5!default;
+$headings-font-weight: normal!default;
+$headings-line-height: 1.1!default;
+$headings-margin-bottom:15px!default;
+$paragraph-margin-bottom:15px!default; 
+
+$btn-padding-y: 9.5px!default;
+$btn-padding-x: 24px!default; 
+$btn-font-weight: 600!default;
+$btn-border-width: 2px; 
+$btn-padding-y-sm: 7px!default;
+$btn-padding-x-sm: 24px!default;
+
+$breadcrumb-padding-y:0!default;
+$breadcrumb-padding-x:0!default;
+$breadcrumb-margin-bottom:0!default;
+$breadcrumb-bg:transparent!default;
+
+$breadcrumb-divider: none;
+*/
+
+// Forms 
+$input-height: 50px!default;
+$input-padding-y: 0.25rem!default;
+$input-padding-x: 1.5rem!default;
+$input-border-color: var(--white)!default;
+$input-border-width: 2px; 
+
+// Btn
+$btn-padding-y: 0.75rem!default;
+$btn-padding-x: 1.5rem!default;
+
+// Color Scheme
+@import "variables/color-scheme";
+
+// Options
+// Quickly modify global styling by enabling or disabling optional features.
+@import "variables/options";  
+
+
+// navbar
+@import "variables/navbar";

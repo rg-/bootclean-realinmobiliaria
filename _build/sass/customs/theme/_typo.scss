@@ -1,0 +1,35 @@
+.section-title,
+.widget-title{
+    
+}
+
+.section-title{
+    font-weight:400;
+    font-family: 'PT Serif';
+    letter-spacing: 3px;
+    &.md{ 
+        @include class-breakpoint(24px, 26px, 30px, 30px, 30px, 'font-size' ); 
+    }
+    &.lg{ 
+        @include class-breakpoint(28px, 30px, 40px, 40px, 40px, 'font-size' ); 
+    }
+    &.xl{ 
+        @include class-breakpoint(34px, 39px, 50px, 50px, 50px, 'font-size' ); 
+    }
+
+}
+
+h2, .h2{ 
+    @include class-breakpoint(25px, 25px, 36px, 36px, 36px, 'font-size' ); 
+}
+h3, .h3{ 
+    @include class-breakpoint(20px, 20px, 26px, 26px, 26px, 'font-size' ); 
+}
+h4, .h4{ 
+    @include class-breakpoint(19px, 19px, 22px, 22px, 22px, 'font-size' ); 
+    line-height: 1.4;
+}
+h5, .h5{ 
+    @include class-breakpoint(17px, 17px, 20px, 20px, 20px, 'font-size' ); 
+    line-height: 1.4;
+}

@@ -1,0 +1,99 @@
+
+.theme-slick-slider{
+    .loading.embed-responsive{
+        background-color:#eee;
+    }
+    .lazyload-loading{
+        background-color:rgba(255,255,255,0.4);
+    }
+} 
+
+a.btn-slider{
+    display:block;
+    &.bg-primary.text-white:hover{
+        background-color:var(--secondary);
+        color:#fff!important;
+        text-decoration:none;
+    }   
+}
+
+.post-property.single {
+    .page-header .slick-slider-container .theme-slick-slider .slick-slide .item:before{
+        display:none!important;
+    }
+
+    .page-header{
+        .overlay-slider-mobile{
+            .post-action{
+                @media (max-width: 667px) { 
+                    display:none;
+                } 
+            }
+            @include breakpoint-max(sm) { 
+                position:relative!important;
+                margin-top:-60px;
+            }
+        }
+    }
+
+}
+
+
+$slick-arrows-width:50px;
+$slick-arrows-height:50px;
+$slick-arrows-font-size:30px;
+$slick-arrows-line-height:50px;
+.slick-prev,
+.slick-next {
+
+    width:$slick-arrows-width;
+    height:$slick-arrows-height; 
+    background-color:#fff;
+    color:var(--primary);  
+    
+    &:before { 
+        color:var(--primary);
+        font-size: $slick-arrows-font-size;
+        line-height: $slick-arrows-line-height;
+        @include make-as-icomoon(); 
+    }
+
+    &:hover,&:focus{
+        background-color:var(--primary);
+        color:#fff;
+        &:before {
+            color:#fff;
+        }
+    }
+
+} 
+.slick-prev:before{ content: "\e901"; }
+.slick-next:before{ content: "\e902"; }
+
+
+.slick-nav{
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+    background-color:var(--light);
+    @include breakpoint(lg) { 
+        bottom: 40px; 
+        left: -36px;
+        right: inherit;
+    } 
+    a{
+        display:block;
+        height:43px;
+        i{
+            height:43px;
+            width:36px;
+            background-size:25px 25px;
+            @include opacity(.5);
+        }
+        &:hover{
+            i{
+                @include opacity(1);
+            }
+        }
+    }
+}

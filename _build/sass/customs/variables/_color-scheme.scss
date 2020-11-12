@@ -1,0 +1,68 @@
+//
+// Color system
+//
+
+/*
+
+	This ones commented are default ones.
+	In this custom configuration i´ve removed all $colors, and made some map-merges into the main.scss
+	
+	Idea here is to output a cleanner :root variables into the css file, and also make all those colors to be available for color variants over the components like buttons, alerts, so on.
+
+*/
+
+$primary:       #d2b789 !default; //brown 
+$secondary:     #002246 !default; //blue
+$tertiary: #d7ac67 !default; //sand 
+$gray-100: #f7f7f7 !default; 
+$gray-300: #b3b3b3 !default; 
+$gray-500: #bbbbbb !default; 
+$light: #f2f2f2 !default;
+/*
+
+	If there´s the need to add colors, just do:
+
+*/
+
+/*	*/
+	$theme-colors: () !default;
+	$theme-colors: map-merge((
+	  "gray-100":    $gray-100,
+	  "gray-500":    $gray-500,
+	), $theme-colors); 
+
+
+
+/*
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+ 
+$blue:    #0B486B !default;
+$indigo:  #6610f2 !default;
+$purple:  #BD1550 !default;
+$pink:    #FE4365 !default;
+$red:     #dc3545 !default;
+$orange:  #E97F02 !default;
+$yellow:  #F8CA00 !default;
+$green:   #8A9B0F !default;
+$teal:    #83AF9B !default;
+$cyan:    #00A0B0 !default;
+
+$primary:       $green !default;
+$secondary:     $purple !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default; 
+*/
