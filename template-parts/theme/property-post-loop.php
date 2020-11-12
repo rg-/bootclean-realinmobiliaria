@@ -33,7 +33,7 @@
 		<div class="post-meta mb-3">
 
 			<div class="post-meta-cat font-Work-Sans">
-				<span><?php echo WPBC_get_property_meta_cats($prop_args); ?></span>
+				<span><?php echo WPBC_get_property_meta_cats($prop_args, true); ?></span>
 		 	</div> 
 
 		 	<div class="property-price font-PT-Serif">

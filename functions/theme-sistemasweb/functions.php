@@ -73,7 +73,7 @@ function WPBC_get_property_operation($args=array()){
 	}
 	return $operation;
 }
-function WPBC_get_property_operations($args=array()){
+function WPBC_get_property_operations($args=array(), $if_query_vars=false){
 	$operations = array(); // default
 	if(WPBC_is_property_venta($args)){
 		$operations[] = 'venta';
@@ -84,11 +84,20 @@ function WPBC_get_property_operations($args=array()){
 	if(WPBC_is_property_alquiler_temporario($args)){
 		$operations[] = 'alquiler_temporario';
 	}
-	return $operations;
-}
-function WPBC_get_property_meta_cats($args=array()){
 
-	$operations = WPBC_get_property_operations($args); 
+	if($if_query_vars && isset($_GET['operation']) ){
+		if($_GET['operation']=='V') return array('venta');
+		if($_GET['operation']=='A') return array('alquiler');
+		if($_GET['operation']=='T') return array('alquiler_temporario');		
+	}else{
+		return $operations;
+	}
+
+	
+}
+function WPBC_get_property_meta_cats($args=array(), $if_query_vars=false){
+
+	$operations = WPBC_get_property_operations($args, $if_query_vars); 
 	$operations_temp = array();
 	foreach ($operations as $operation) {
 		$operation = apply_filters('wpbc/custom-filter/operation', $operation);
